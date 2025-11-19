@@ -9,8 +9,9 @@ function gradeCalculator() {
         grade2 < 0 || grade2 > 100 ||
         grade3 < 0 || grade3 > 100) {
         result.textContent = `Invalid Input. Please Enter grade (1-100)`;
-    } else {
-        let average = (grade1 + grade2 + grade3) / 3;
+        return;
+    }
+    let average = (grade1 + grade2 + grade3) / 3;
 
     if (average >= 70) {
 
@@ -20,5 +21,4 @@ function gradeCalculator() {
 
     }
     
-}
 }
