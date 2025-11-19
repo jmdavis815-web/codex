@@ -5,7 +5,12 @@ function gradeCalculator() {
     let grade2 = parseFloat(document.getElementById("grade2").value);
     let grade3 = parseFloat(document.getElementById("grade3").value);
     let result = document.getElementById("result");
-    if ( grade1 < 0 || grade1 > 100 ||
+    if (studentName === "") {
+        result.textContent = `Please Enter Student Name.`;
+        return;
+    }
+    if ( isNaN(grade1) || isNaN(grade2) || isNaN(grade3) ||
+        grade1 < 0 || grade1 > 100 ||
         grade2 < 0 || grade2 > 100 ||
         grade3 < 0 || grade3 > 100) {
         result.textContent = `Invalid Input. Please Enter grade (0-100)`;
