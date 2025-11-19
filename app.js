@@ -5,8 +5,12 @@ function gradeCalculator() {
     let grade2 = parseFloat(document.getElementById("grade2").value);
     let grade3 = parseFloat(document.getElementById("grade3").value);
     let result = document.getElementById("result");
-
-    let average = (grade1 + grade2 + grade3) / 3;
+    if ( grade1 < 0 || grade1 > 100 ||
+        grade2 < 0 || grade2 > 100 ||
+        grade3 < 0 || grade3 > 100) {
+        result.textContent = `Invalid Input. Please Enter grade (1-100)`;
+    } else {
+        let average = (grade1 + grade2 + grade3) / 3;
 
     if (average >= 70) {
 
@@ -16,4 +20,5 @@ function gradeCalculator() {
 
     }
     
+}
 }
