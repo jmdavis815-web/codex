@@ -8,7 +8,7 @@ function gradeCalculator() {
     if ( grade1 < 0 || grade1 > 100 ||
         grade2 < 0 || grade2 > 100 ||
         grade3 < 0 || grade3 > 100) {
-        result.textContent = `Invalid Input. Please Enter grade (1-100)`;
+        result.textContent = `Invalid Input. Please Enter grade (0-100)`;
         return;
     }
     let average = (grade1 + grade2 + grade3) / 3;
